@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+#slider{
+    .main{
+        background-color: bisque;
+        .icons{
+            #left{
+                font-size: 30px;
+                cursor: pointer;
+                margin-left: 20px;
+            }
+            #right{
+                font-size: 30px;
+                cursor: pointer;
+            }
+            h3{
+                display: inline-block;
+            }
+        }
+        #slide{
+            display: flex;
+            overflow-x: hidden;
+            div{
+            transition-duration: 0.4s;
+            transition: all 0.4s;
+            }
+        }
+        .notactive{
+            display: none;
+            animation: scale-display--reversed .3s;
+			animation-fill-mode:forwards;
+			
+        }
+        .disable{
+            color: #e0cac6;
+        }
+    }
+    @keyframes scale-display {
+        0% {
+            display: inline-block;
+            transform: scale(0);
+        -webkit-transform: scale(0);
+        }
+        50% {
+            transform: scale(0.25s);
+        }
+        100% {
+            display: none;
+            transform: scale(0.5s);
+        -webkit-transform: scale(0.5s);
+        }
+    }
+}
